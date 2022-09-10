@@ -14,6 +14,9 @@ class ListsController < ApplicationController
 
 
   def index
+    # 環境変数の利用実験
+    puts "作成したキー #{ENV['SECRET_KEY']}"
+
     @lists = List.all
   end
 
